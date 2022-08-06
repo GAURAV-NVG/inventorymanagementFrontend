@@ -13,6 +13,10 @@ import Footer from './Components/Footer';
 import Category from './Components/Category';
 import Products from './Components/Products';
 import Product from './Components/Product';
+import Order from './Components/Order';
+import Damaged from './Components/Damaged';
+import Invoice from './Components/Invoice';
+import Orders from './Components/Orders';
 // import axios from 'axios';
 
 
@@ -31,6 +35,10 @@ root.render(
       <Route path="/units" element={<Units/>}/>
       <Route path="/inventory" element={<Products />}/>
       <Route path="/product" element={<Product/> }/>
+      <Route path="/order" element={<Order/>}/>
+      <Route path="/damaged" element={<Damaged />}/>
+      <Route path="/invoice" element={<Invoice/>}/>
+      <Route path="/orders" element={<Orders/>}/>
     </Routes>
     <br/>
     <br/>

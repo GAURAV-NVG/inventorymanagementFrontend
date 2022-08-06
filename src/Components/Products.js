@@ -37,7 +37,7 @@ const Products = () => {
         var curr = e.target.curr.value;
         var exp_date = e.target.exp_date.value;
 
-        const request = axios({
+        axios({
             headers: { 
                 'content-type': 'application/json'
             },
@@ -105,7 +105,9 @@ const Products = () => {
             <button type="button" className="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
             Add Inventory
             </button>
-    <button className="btn btn-success ms-2" onClick={removeSearch}>Clear search</button>
+            <Link to="/damaged" className='btn btn-dark mx-2'> k
+            </Link>
+    <button className="btn btn-success my-2" onClick={removeSearch}>Clear search</button>
     {/*  */}
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
@@ -193,7 +195,8 @@ const Products = () => {
             <button type="button" className="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
             Add Inventory
             </button>
-   
+            <Link to="/damaged" className='btn btn-dark mx-2'> <i class="fas fa-house-damage"></i>
+            </Link>
     {/*  */}
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">

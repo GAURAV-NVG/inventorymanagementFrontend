@@ -92,10 +92,10 @@ const NavBar = () => {
                     <a className="nav-link" href="/inventory"><i className="boxes icon"></i> Products</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/"><i className="pallet icon"></i> Orders</a>
+                    <a className="nav-link" href="/order"><i className="pallet icon"></i> Orders</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/"><i className="file icon"></i> Invoice</a>
+                    <a className="nav-link" href="/invoice"><i className="file icon"></i> Invoice</a>
                   </li>
                 </ul>
 
