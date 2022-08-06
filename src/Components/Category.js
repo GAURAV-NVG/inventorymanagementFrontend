@@ -10,7 +10,7 @@ const Category = () => {
 
     React.useEffect(() => {
         if(count == 0){
-            axios.get('api/categories').then((res) => {
+            axios.get('https://inventorymanagement2.herokuapp.com/api/categories').then((res) => {
                 setStatus(res.data);
             });
         }
@@ -26,7 +26,7 @@ const Category = () => {
                 'content-type': 'application/json'
             },
             method: 'post',
-            url: `/api/categories/add`,
+            url: `https://inventorymanagement2.herokuapp.com/api/categories/add`,
             params: {
                 cname: uname,
                 is_active: is_active
@@ -156,7 +156,7 @@ const Category = () => {
                                                         'content-type': 'application/json'
                                                     },
                                                     method: 'post',
-                                                    url: `api/categorie/${cname}/update`,
+                                                    url: `https://inventorymanagement2.herokuapp.com/api/categorie/${cname}/update`,
                                                     params: {
                                                         uname: cname,
                                                         is_active: is_active
@@ -209,7 +209,7 @@ const Category = () => {
                                                         'content-type': 'application/json'
                                                     },
                                                     method: 'get',
-                                                    url: `/api/categorie/${uname}/delete`,
+                                                    url: `https://inventorymanagement2.herokuapp.com/api/categorie/${uname}/delete`,
                                                     params: {
                                                         uname: uname,
                                                     }
@@ -344,7 +344,7 @@ const Category = () => {
                                                     'content-type': 'application/json'
                                                 },
                                                 method: 'post',
-                                                url: `api/categorie/${cname}/update`,
+                                                url: `https://inventorymanagement2.herokuapp.com/api/categorie/${cname}/update`,
                                                 params: {
                                                     uname: cname,
                                                     is_active: is_active
@@ -397,7 +397,7 @@ const Category = () => {
                                                     'content-type': 'application/json'
                                                 },
                                                 method: 'get',
-                                                url: `/api/categorie/${uname}/delete`,
+                                                url: `https://inventorymanagement2.herokuapp.com/api/categorie/${uname}/delete`,
                                                 params: {
                                                     uname: uname,
                                                 }

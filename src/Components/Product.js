@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import bwipjs from 'bwip-js';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
