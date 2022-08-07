@@ -24,14 +24,9 @@ const Register = () =>{
                 email:email,
                 pass:password
             }
-        })
-        .then((response) => {
+        }).then((response) => {
             navigate("/login");
-            if(response.data.login_status == true){
-                navigate("/login");
-            }
-        })
-        .catch((error) => error);
+        }).catch((error) => error);
     }
     
     return (
