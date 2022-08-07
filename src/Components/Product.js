@@ -103,7 +103,7 @@ const Product = (props) => {
                         <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel"><img src="https://cdn-icons.flaticon.com/png/512/4862/premium/4862425.png?token=exp=1659787988~hmac=3e9e6aa2ac5c849df7541b923dd7834d" className="me-2" style={{height:"35px"}}/> 
-                            Add Inventory</h5>
+                            Edit</h5>
                             <button type="button" className="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
@@ -153,7 +153,7 @@ const Product = (props) => {
                             <input type="text" id="exp_date" className="form-control" name="exp_date" defaultValue={data.exp_date}/>
                             </div>
 
-                                <button className="btn btn-primary btn-floating float-end mt-5 me-1"><i className="fas fa-plus"></i></button>
+                                <button className="btn btn-success btn-floating float-end mt-5 me-1"><i className="fas fa-check"></i></button>
                                 
                             </form>
 

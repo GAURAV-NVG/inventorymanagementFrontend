@@ -11,17 +11,17 @@ const Orders = () => {
     });
 
     return (
-        <div className="mt-2">
-            {orders.map((order) => <div>
-                <div class="d-flex justify-content-center mt-2 ms-2">
-            <div >
-                <div class="card text-center" style={{width:"280px"}}>
-                <div class="card-header">Order</div>
-                <div class="card-body">
-                <div class="input-group flex-wrap" style={{width:"200px"}}>
+        <div className="d-flex justify-content-center">
+            {orders.map((order) => <table id={order._id+"-tab"}>
+                <tr class="d-flex justify-content-center mt-2 ms-2">
+            <tbody>
+                <tr class="card text-center" style={{width:"280px"}}>
+                <tr class="card-header">Order</tr>
+                <tr class="card-body">
+                <tr class="input-group flex-wrap" style={{width:"200px"}}>
                     <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
-                    <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" value={order.user_name}/>
-                </div>
+                    <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" value={order.Cname}/>
+                </tr>
                 <br/>
                 Date : {order.Date}
                     <table class="table align-middle mb-0 bg-white w-25 mt-2 rounded-5 w-25">
@@ -36,7 +36,7 @@ const Orders = () => {
                             {
                                 order.Products.map((item)=>
                                     <tr>
-                                        <td>{item.Pname}</td>
+                                        <td>{item.pname}</td>
                                         <td>{item.qty}</td>
                                         <td>{item.tc}</td>
                                     </tr>
@@ -44,15 +44,35 @@ const Orders = () => {
                             }
                         </tbody>
                     </table>
-                </div>
-                <div class="card-footer text-muted" style={{display:"flex",justifyContent: "space-between",alignItems: "center"}}>Total Cost : {order.tc} <button type="button" className="btn btn-primary btn-floating ms-5">
+                </tr>
+                <tr class="card-footer text-muted" style={{display:"flex",justifyContent: "space-between",alignItems: "center"}}>Total Cost : {order.tc} <button type="button" className="btn btn-primary btn-floating ms-5" id={order._id+"-but"}>
                 <i className="fas fa-download"></i>
               </button>
-                </div>
-                </div>
-            </div>
+
+              <script>
+                {`
+                  $('#${order._id+"-but"}').click(function () {
+
+                    var table = tableToJson($('#${order._id+"-tab"}').get(0))
+                    var doc = new jsPDF('p','pt', 'a4', true);
+                    doc.cellInitialize();
+                    $.each(table, function (i, row){
+                        console.debug(row);
+                        $.each(row, function (j, cell){
+                            doc.cell(10, 50,120, 50, cell, i);  // 2nd parameter=top margin,1st=left margin 3rd=row cell width 4th=Row height
+                        })
+                    })
+            
+            
+                    doc.save('sample-file.pdf');
+                });
+                `}
+              </script>
+                </tr>
+                </tr>
+            </tbody>
            
-        </div></div>
+        </tr></table>
             )}
         </div>
     )

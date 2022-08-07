@@ -17,6 +17,7 @@ import Order from './Components/Order';
 import Damaged from './Components/Damaged';
 import Invoice from './Components/Invoice';
 import Orders from './Components/Orders';
+import InvoiceI from './Components/InvoiceI';
 // import axios from 'axios';
 
 
@@ -39,6 +40,7 @@ root.render(
       <Route path="/damaged" element={<Damaged />}/>
       <Route path="/invoice" element={<Invoice/>}/>
       <Route path="/orders" element={<Orders/>}/>
+      <Route path="/invoicei" element={<InvoiceI />}/>
     </Routes>
     <br/>
     <br/>
