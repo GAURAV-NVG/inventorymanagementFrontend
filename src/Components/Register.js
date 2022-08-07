@@ -26,6 +26,7 @@ const Register = () =>{
             }
         })
         .then((response) => {
+            navigate("/login");
             if(response.data.login_status == true){
                 navigate("/login");
             }
