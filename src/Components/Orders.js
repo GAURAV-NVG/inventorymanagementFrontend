@@ -12,8 +12,8 @@ const Orders = () => {
 
     return (
         <div>
-            {orders.map((order) => <table id={order._id+"-tab"} class="d-flex justify-content-center mt-2 ms-2">
-                <tr class="d-flex justify-content-center mt-2 ms-2">
+            {orders.map((order) => <table id={order._id+"-tab"} class="d-flex justify-content-center mt-2">
+                <tr class="d-flex justify-content-center mt-2">
             <tbody>
                 <tr class="card text-center" style={{width:"280px"}}>
                 <tr class="card-header">Order</tr>
